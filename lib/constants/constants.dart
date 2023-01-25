@@ -1,14 +1,14 @@
 import 'dart:ui';
 
 /// Colors
-const Color primaryDark = Color.fromARGB(255, 3, 74, 110);
-const Color primaryLight = Color.fromARGB(255, 115, 204, 233);
+const Color primaryDark = Color.fromARGB(255, 186, 58, 3);
+const Color primaryLight = Color.fromARGB(255, 226, 112, 19);
 
-const Color secondaryDark = Color(0xFF507DFF);
-const Color secondaryLight = Color(0xFF60A6FF);
+const Color secondaryDark = Color.fromARGB(255, 0, 0, 0);
+const Color secondaryLight = Color.fromARGB(255, 97, 97, 98);
 
 const Color fontDark = Color.fromARGB(255, 26, 29, 35);
-const Color fontLight = Color(0xFFB3C7E0);
+const Color fontLight = Color.fromARGB(255, 216, 216, 216);
 
 const Color accent = Color(0xFF8A4D52);
 const Color background = Color(0xFFF1F2F5);
