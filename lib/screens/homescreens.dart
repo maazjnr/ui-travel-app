@@ -2,7 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:travel_app/constants/constants.dart';
 import 'package:travel_app/screens/home.dart';
+import 'package:travel_app/screens/myloc.dart';
+import 'package:travel_app/screens/saved.dart';
 import 'package:travel_app/screens/search.dart';
+import 'package:travel_app/screens/setting.dart';
 
 class MyHomePage extends StatefulWidget {
   @override
@@ -14,10 +17,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
   final List<Widget> _pages = [
     Home(),
+    MyLoc(),
     Search(),
-    Search(),
-    Search(),
-    Search(),
+    Saved(),
+    Setting()
   ];
 
   void _onItemTapped(int index) {

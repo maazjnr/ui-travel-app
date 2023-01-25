@@ -52,29 +52,27 @@ class _GetStartedScreenState extends State<GetStartedScreen> {
           const SizedBox(
             height: defaultSpacing,
           ),
-
           ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: primaryLight,
-                minimumSize: const Size(250, 70),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(defaultRadius),
-                ),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: primaryLight,
+              minimumSize: const Size(250, 70),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(defaultRadius),
               ),
-              onPressed: (() {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: ((context) => const LoginScreen()),
-                    ));
-              }),
-              child: const Text(
-                'Get started',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: defaultSpacing * 1.2),
-              ),),
-
+            ),
+            onPressed: (() {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: ((context) => const LoginScreen()),
+                  ));
+            }),
+            child: const Text(
+              'Get started',
+              style: TextStyle(
+                  fontWeight: FontWeight.bold, fontSize: defaultSpacing * 1.2),
+            ),
+          ),
         ],
       ),
     ));
