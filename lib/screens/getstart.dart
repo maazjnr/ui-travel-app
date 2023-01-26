@@ -10,9 +10,6 @@ class GetStartedScreen extends StatefulWidget {
   State<GetStartedScreen> createState() => _GetStartedScreenState();
 }
 
-// ignore: prefer_const_declarations
-final backGdImg =
-    'https://images.unsplash.com/photo-1506012787146-f92b2d7d6d96?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ';
 
 class _GetStartedScreenState extends State<GetStartedScreen> {
   @override
