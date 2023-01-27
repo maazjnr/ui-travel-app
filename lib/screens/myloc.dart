@@ -13,7 +13,7 @@ class _MyLocState extends State<MyLoc> {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Text('My Loc page'),
+      child: Text('My Loc screen'),
     );
   }
 }
