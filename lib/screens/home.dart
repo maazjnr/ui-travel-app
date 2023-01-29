@@ -9,14 +9,13 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  final List<Widget> catergoriies = [
-    const Text('Packages'),
-    const Text('Flight'),
-    const Text('Places'),
-    const Text('Hotels'),
-    const Text('Matches'),
-    const Text('Parties'),
-  ];
+  bool _isPressed = false;
+
+  void _changeColor() {
+    setState(() {
+      _isPressed = !_isPressed;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +31,7 @@ class _HomeState extends State<Home> {
               color: Colors.black,
             ),
             trailing: CircleAvatar(
-              backgroundImage:  AssetImage("assets/images/bgimg.jfif"),
+              backgroundImage: AssetImage("assets/images/bgimg.jfif"),
             ),
             title: Text(
               'New York, USA',
@@ -42,20 +41,80 @@ class _HomeState extends State<Home> {
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(defaultSpacing * 1.5),
-            child: Row(
-              children: [
-                TextButton(
-                  onPressed: (() {}),
-                  child: Text(
-                    'Packages',
-                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                        fontSize: defaultSpacing * 1.3,
-                        fontWeight: FontWeight.bold),
+          Container(
+            width: double.infinity,
+            padding: const EdgeInsets.symmetric(
+                horizontal: defaultRadius, vertical: defaultRadius / 3),
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  TextButton(
+                    onPressed: _changeColor,
+                    child: Text(
+                      'Packages',
+                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                            fontSize: defaultSpacing * 1.3,
+                            fontWeight: FontWeight.bold,
+                            color: _isPressed ? Colors.red : Colors.black,
+                          ),
+                    ),
                   ),
-                )
-              ],
+                  TextButton(
+                    onPressed: (() {}),
+                    child: Text(
+                      'Flight',
+                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                          fontSize: defaultSpacing * 1.3,
+                          fontWeight: FontWeight.bold,
+                         color: _isPressed ? Colors.red : Colors.black,
+                          ),
+                    ),
+                  ),
+                  TextButton(
+                    onPressed: _changeColor,
+                    child: Text(
+                      'Places',
+                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                          fontSize: defaultSpacing * 1.3,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black),
+                    ),
+                  ),
+                  TextButton(
+                    onPressed: (() {}),
+                    child: Text(
+                      'Matches',
+                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                          fontSize: defaultSpacing * 1.3,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black),
+                    ),
+                  ),
+                  TextButton(
+                    onPressed: (() {}),
+                    child: Text(
+                      'Matches',
+                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                          fontSize: defaultSpacing * 1.3,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black),
+                    ),
+                  ),
+                  TextButton(
+                    onPressed: (() {}),
+                    child: Text(
+                      'Parties',
+                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                          fontSize: defaultSpacing * 1.3,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black),
+                    ),
+                  ),
+                ],
+              ),
             ),
           )
         ],
