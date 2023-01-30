@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:travel_app/constants/constants.dart';
+import 'package:travel_app/widget/maaz/placecategory.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -9,21 +10,22 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  bool _isPressed = false;
+  bool _color = false;
 
   void _changeColor() {
     setState(() {
-      _isPressed = !_isPressed;
+      _color = !_color;
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
       child: Column(
         children: [
           const SizedBox(
-            height: defaultSpacing,
+            height: defaultSpacing * 2,
           ),
           const ListTile(
             leading: Icon(
@@ -57,8 +59,8 @@ class _HomeState extends State<Home> {
                       'Packages',
                       style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                             fontSize: defaultSpacing * 1.3,
-                            fontWeight: FontWeight.bold,
-                            color: _isPressed ? Colors.red : Colors.black,
+                            fontWeight: FontWeight.w500,
+                            color: _color ? primaryLight : Colors.black,
                           ),
                     ),
                   ),
@@ -68,18 +70,17 @@ class _HomeState extends State<Home> {
                       'Flight',
                       style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                           fontSize: defaultSpacing * 1.3,
-                          fontWeight: FontWeight.bold,
-                         color: _isPressed ? Colors.red : Colors.black,
-                          ),
+                          fontWeight: FontWeight.w500,
+                          color: Colors.black),
                     ),
                   ),
                   TextButton(
-                    onPressed: _changeColor,
+                    onPressed: (() {}),
                     child: Text(
                       'Places',
                       style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                           fontSize: defaultSpacing * 1.3,
-                          fontWeight: FontWeight.bold,
+                          fontWeight: FontWeight.w500,
                           color: Colors.black),
                     ),
                   ),
@@ -89,7 +90,7 @@ class _HomeState extends State<Home> {
                       'Matches',
                       style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                           fontSize: defaultSpacing * 1.3,
-                          fontWeight: FontWeight.bold,
+                          fontWeight: FontWeight.w500,
                           color: Colors.black),
                     ),
                   ),
@@ -99,7 +100,7 @@ class _HomeState extends State<Home> {
                       'Matches',
                       style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                           fontSize: defaultSpacing * 1.3,
-                          fontWeight: FontWeight.bold,
+                          fontWeight: FontWeight.w500,
                           color: Colors.black),
                     ),
                   ),
@@ -109,14 +110,52 @@ class _HomeState extends State<Home> {
                       'Parties',
                       style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                           fontSize: defaultSpacing * 1.3,
-                          fontWeight: FontWeight.bold,
+                          fontWeight: FontWeight.w500,
                           color: Colors.black),
                     ),
                   ),
                 ],
               ),
             ),
-          )
+          ),
+          const SizedBox(
+            height: defaultSpacing,
+          ),
+          ListTile(
+            leading: Text(
+              '101 Tall Packages',
+              style: Theme.of(context).textTheme.labelLarge?.copyWith(
+                  fontSize: defaultSpacing * 1.2, fontWeight: FontWeight.w500),
+            ),
+            trailing: Text(
+              'See all',
+              style: Theme.of(context).textTheme.labelLarge?.copyWith(
+                  fontSize: defaultSpacing * 1.2,
+                  fontWeight: FontWeight.w500,
+                  color: primaryLight),
+            ),
+          ),
+          const SizedBox(
+            height: defaultSpacing / 2,
+          ),
+          const PLaceCategory(),
+          const SizedBox(
+            height: defaultSpacing / 2,
+          ),
+          ListTile(
+            leading: Text(
+              'Popular Packages',
+              style: Theme.of(context).textTheme.labelLarge?.copyWith(
+                  fontSize: defaultSpacing * 1.2, fontWeight: FontWeight.w500),
+            ),
+            trailing: Text(
+              'See all',
+              style: Theme.of(context).textTheme.labelLarge?.copyWith(
+                  fontSize: defaultSpacing * 1.2,
+                  fontWeight: FontWeight.w500,
+                  color: primaryLight),
+            ),
+          ),
         ],
       ),
     );
