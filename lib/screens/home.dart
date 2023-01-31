@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:travel_app/constants/constants.dart';
 import 'package:travel_app/widget/maaz/placecategory.dart';
+import 'package:travel_app/widget/maaz/popularpackages.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -156,6 +157,8 @@ class _HomeState extends State<Home> {
                   color: primaryLight),
             ),
           ),
+
+         const PopularPackages(),
         ],
       ),
     );
