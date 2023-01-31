@@ -159,6 +159,22 @@ class _HomeState extends State<Home> {
           ),
 
          const PopularPackages(),
+
+
+         ListTile(
+            leading: Text(
+              'News about places',
+              style: Theme.of(context).textTheme.labelLarge?.copyWith(
+                  fontSize: defaultSpacing * 1.2, fontWeight: FontWeight.w500),
+            ),
+            trailing: Text(
+              'all news',
+              style: Theme.of(context).textTheme.labelLarge?.copyWith(
+                  fontSize: defaultSpacing * 1.2,
+                  fontWeight: FontWeight.w500,
+                  color: primaryLight),
+            ),
+          ),
         ],
       ),
     );
