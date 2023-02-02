@@ -10,8 +10,9 @@ class News extends StatefulWidget {
 class NewsItem {
   final String title;
   final subtitle;
+  final String time;
 
-  NewsItem(this.title, this.subtitle);
+  NewsItem(this.title, this.subtitle, this.time);
 }
 
 class _NewsState extends State<News> {
