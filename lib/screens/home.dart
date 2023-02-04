@@ -90,7 +90,7 @@ class _HomeState extends State<Home> {
                     child: Text(
                       'Matches',
                       style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                          fontSize: defaultSpacing * 1.3,
+                          fontSize: defaultSpacing * 1.4,
                           fontWeight: FontWeight.w500,
                           color: Colors.black),
                     ),
